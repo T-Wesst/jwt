@@ -6,6 +6,7 @@ const userRoutes = require('./routes/user');
 require('./config/mongoDB');
 // ROUTE LOGGER
 app.use(logger('dev'));
+// Parse JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // ROUTES
