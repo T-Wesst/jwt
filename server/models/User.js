@@ -22,4 +22,13 @@ UserSchema.pre('save', async function(next) {
   }
 });
 
+UserSchema.methods.comparePassword = async function(password) {
+  try {
+    let matched = await checkPassword(password, this.password);
+    return matched;
+  } catch (err) {
+    if (err) throw err;
+  }
+};
+
 module.exports = model('User', UserSchema);

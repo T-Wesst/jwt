@@ -21,9 +21,13 @@
 4. **BCRYPT**
 
 - [x] Hash password
-- [ ] Check password
+- [x] Check password
 
 5. **JSON WEB TOKEN**
+
+- [ ] Create token for signup
+- [ ] Create token for login
+
 6. **GRAVATAR**
 
 - [ ] User profile images

@@ -1,8 +1,22 @@
 const { User } = require('../../models');
 
 module.exports = {
-  login: function(req, res) {
-    res.send('login route');
+  login: async (req, res) => {
+    try {
+      let user = await User.findOne({ username: req.body.username });
+      try {
+        let matchedPassword = await user.comparePassword(req.body.password);
+        if (matchedPassword) {
+          res.redirect('/users/authorized');
+        } else {
+          res.send('Sorry the username or password is incorrect');
+        }
+      } catch (err) {
+        if (err) throw err;
+      }
+    } catch (err) {
+      if (err) throw err;
+    }
   },
   logout: function(req, res) {
     res.send('log out route');
@@ -17,7 +31,9 @@ module.exports = {
   },
   authorized: async (req, res) => {
     try {
-      res.send('you are authorized! Goodbye');
+      res.send(
+        'you are authorized! Dropping Database...Beep...Boop...Bop Goodbye'
+      );
       User.deleteMany({}, err => {
         console.log('collection removed');
       });
