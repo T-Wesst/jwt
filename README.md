@@ -1,16 +1,29 @@
 # MERN Chat App
 
-Checkpoints
-EXPRESS.JS
-[x] - define and create controllers
-MONGOOSE
-[x] - User model
-[x] - Message model
-[x] - Chatroom model
-[x] - DB Connection
-MORGAN
-[x] - logger
-BCRYPT
-[x] - hash password
-[ ] - compare password
-JSON WEB TOKEN
+## Checkpoints
+
+1. **EXPRESS.JS**
+
+- [ ] Define and create controllers
+- [ ] Express validator
+
+2. **MONGOOSE**
+
+- [x] User model
+- [x] Message model
+- [x] Chatroom model
+- [x] DB Connection
+
+3. **MORGAN**
+
+- [x] Log dev to console
+
+4. **BCRYPT**
+
+- [x] Hash password
+- [ ] Check password
+
+5. **JSON WEB TOKEN**
+6. **GRAVATAR**
+
+- [ ] User profile images
