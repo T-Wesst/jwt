@@ -1,5 +1,6 @@
+require('dotenv').config();
 const jwt = require('jsonwebtoken');
-const SECRET = process.env.SECRET || 'secret';
+const { SECRET } = process.env;
 
 module.exports = {
   createToken: async user => {
