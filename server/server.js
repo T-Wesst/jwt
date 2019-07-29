@@ -17,5 +17,6 @@ config();
 app.use(cookieParser(process.env.SECRET));
 // ROUTES
 app.use('/users', userRoutes);
+console.log('a change made');
 
 app.listen(process.env.PORT || 3001);

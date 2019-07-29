@@ -26,7 +26,7 @@
 5. **JSON WEB TOKEN**
 
 - [ ] Create token and validate function
-- [ ] Create token for signup
+- [x] Create token and cookie for signup
 - [ ] Create token for login
 
 6. **DotENV**

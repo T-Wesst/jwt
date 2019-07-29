@@ -35,10 +35,11 @@ module.exports = {
   },
   signup: async (req, res) => {
     try {
-      let user = await User.create(req.body);
-      let token = await createToken(user);
-      res.cookie('token', token, cookieOptions);
-      res.redirect('/users/authorized');
+      // let user = await User.create(req.body);
+      // let token = await createToken(user);
+      res.send('hello');
+      // res.cookie('token', token, cookieOptions);
+      // res.redirect('/users/authorized');
     } catch (err) {
       if (err) throw err;
     }
